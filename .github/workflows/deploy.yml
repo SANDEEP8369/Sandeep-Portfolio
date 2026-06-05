@@ -2,17 +2,12 @@ name: Deploy Vite App
 
 on:
   push:
-    branches:
-      - main
+    branches: [main]
 
 permissions:
   contents: read
   pages: write
   id-token: write
-
-concurrency:
-  group: pages
-  cancel-in-progress: true
 
 jobs:
   build:
@@ -25,12 +20,19 @@ jobs:
         with:
           node-version: 20
 
+      - uses: actions/configure-pages@v5
+
       - run: npm ci
       - run: npm run build
 
+      - name: Verify build
+        run: |
+          ls -la dist
+          ls -la dist/assets
+
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: dist
+          path: ./dist
 
   deploy:
     needs: build
