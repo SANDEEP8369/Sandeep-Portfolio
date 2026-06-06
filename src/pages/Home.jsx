@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const ROLES = ['Java Backend Developer', 'Spring Boot Engineer', 'Microservices Architect', 'Api Integrations'];
 
@@ -10,6 +11,8 @@ const STATS = [
 ];
 
 export default function Hero() {
+
+  const navigate = useNavigate();
   const [roleIndex, setRoleIndex] = useState(0);
   const [typed, setTyped] = useState('');
   const [deleting, setDeleting] = useState(false);
@@ -131,10 +134,10 @@ export default function Hero() {
             </p>
 
             <div className="hero-actions animate-fade-up delay-400">
-              <button className="btn-primary" onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}>
+              <button className="btn-primary" onClick={() => navigate("/projects")}>
                 View Projects →
               </button>
-              <button className="btn-secondary" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>
+              <button className="btn-secondary" onClick={() => navigate("/contact")}>
                 Get in Touch
               </button>
             </div>

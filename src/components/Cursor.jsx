@@ -50,16 +50,16 @@ export default function Cursor() {
       {/* dot */}
       <div ref={dotRef} style={{
         ...base,
-        width: 6,
-        height: 6,
-        background: '#00D4AA',
+        width: 8,
+        height: 8,
+        background: '#6c63ff',
       }} />
       {/* ring */}
       <div ref={ringRef} style={{
         ...base,
-        width: 28,
-        height: 28,
-        border: '1.5px solid rgba(0,212,170,0.7)',
+        width: 36,
+        height: 36,
+        border: '1.5px solid rgba(108, 99, 255, 0.6)',
       }} />
     </>
   )
