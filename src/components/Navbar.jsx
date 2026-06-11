@@ -2,12 +2,12 @@ import { NavLink, useLocation } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 
 const links = [
-  { to: '/',           label: 'Home' },
-  { to: '/about',      label: 'About' },
+  { to: '/', label: 'Home' },
+  { to: '/about', label: 'About' },
   { to: '/experience', label: 'Experience' },
-  { to: '/projects',   label: 'Projects' },
-  { to: '/skills',     label: 'Skills' },
-  { to: '/contact',    label: 'Contact' },
+  { to: '/projects', label: 'Projects' },
+  { to: '/skills', label: 'Skills' },
+  { to: '/contact', label: 'Contact' },
 ]
 
 export default function Navbar() {
@@ -99,6 +99,49 @@ export default function Navbar() {
         ))}
       </div>
 
+      <div
+        style={{
+          display: "flex",
+          gap: "15px",
+          alignItems: "center",
+        }}
+      >
+        <button
+          style={{
+            padding: "10px 20px",
+            background: "linear-gradient(90deg, #00D4AA, #A78BFA)",
+            color: "#fff",
+            border: "none",
+            borderRadius: "50px",
+            fontSize: "14px",
+            fontWeight: "600",
+            cursor: "pointer",
+            transition: "all 0.3s ease",
+            boxShadow: "0 5px 20px rgba(0, 212, 170, 0.25)",
+            fontFamily: "'Space Grotesk', sans-serif",
+          }}
+        >
+          📄 Resume
+        </button>
+
+        <button
+          style={{
+            padding: "10px 20px",
+            background: "rgba(255,255,255,0.05)",
+            color: "#00D4AA",
+            border: "1px solid rgba(0,212,170,0.3)",
+            borderRadius: "50px",
+            fontSize: "14px",
+            fontWeight: "600",
+            cursor: "pointer",
+            backdropFilter: "blur(10px)",
+            transition: "all 0.3s ease",
+            fontFamily: "'Space Grotesk', sans-serif",
+          }}
+        >
+          💼 Hire Me
+        </button>
+      </div>
       {/* Hamburger (mobile) */}
       <button
         onClick={() => setMenuOpen(!menuOpen)}
@@ -124,7 +167,7 @@ export default function Navbar() {
             transform: menuOpen
               ? i === 0 ? 'translateY(6.5px) rotate(45deg)'
                 : i === 2 ? 'translateY(-6.5px) rotate(-45deg)'
-                : 'scaleX(0)'
+                  : 'scaleX(0)'
               : 'none',
             transition: 'transform 0.25s, background 0.2s',
           }} />

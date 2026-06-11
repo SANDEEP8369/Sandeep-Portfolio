@@ -2,13 +2,14 @@ import PageWrapper from '../components/PageWrapper'
 import { personal } from '../data/resume'
 
 const contactItems = [
+
   {
-    label: 'Email',
-    value: personal.email,
-    href: `mailto:${personal.email}`,
-    icon: '✉️',
-    color: '#00D4AA',
-    hint: 'Drop me an email anytime',
+    label: 'WhatsApp',
+    value: "",
+    href: personal.whatsApp,
+    icon: '📲',
+    color: '#0c9655',
+    hint: 'Drop me an message anytime',
   },
   {
     label: 'Phone',
@@ -19,9 +20,25 @@ const contactItems = [
     hint: 'Available Mon–Sat, 10am–7pm IST',
   },
   {
+    label: 'Email',
+    value: personal.email,
+    href: `mailto:${personal.email}`,
+    icon: '✉️',
+    color: '#00D4AA',
+    hint: 'Drop me an email anytime',
+  },
+  {
     label: 'LinkedIn',
     value: 'linkedin.com/in/sandeep-verma',
     href: personal.linkedin,
+    icon: '💼',
+    color: '#06B6D4',
+    hint: 'Connect professionally',
+  },
+  {
+    label: 'GitHub',
+    value: 'github.com/SANDEEP8369',
+    href: personal.github,
     icon: '💼',
     color: '#06B6D4',
     hint: 'Connect professionally',

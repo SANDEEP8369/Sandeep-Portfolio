@@ -9,12 +9,14 @@ export const personal = {
   phone: "+91 8369621306",
   linkedin: "https://linkedin.com/in/sandeep-verma-922850240",
   location: "Mumbai, India",
+  whatsApp: "https://wa.me/918652483029",
+  github: "https://github.com/SANDEEP8369"
 };
 
 // ── Stats ──────────────────────────────────────────────────
 export const stats = [
-  { value: "3+",  label: "Years Experience" },
-  { value: "5",   label: "Key Projects" },
+  { value: "3+", label: "Years Experience" },
+  { value: "5", label: "Key Projects" },
   { value: "20+", label: "Interviews Conducted" },
   { value: "60%", label: "Processing Time Saved" },
   { value: "70%", label: "Integration Effort Cut" },
